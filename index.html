@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background: #000;
+        }
+        #scene{
+            width: 800px;
+            height: 800px;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+        .demo{
+            width: 400px;
+            height: 400px;
+            margin: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation:rotate 4s ease-in infinite;
+
+        }
+        .inner{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+         .demo{
+            transform: rotateX(360deg) rotateY(360deg);
+        }
+        .inner{
+            box-shadow: 0 0 5px 5px #fff;
+        }
+     .inner:nth-child(1){
+            background: url("微信图片_20180613113047.jpg")  no-repeat  center/200px 200px;
+            transform: translateY(-50px) rotateX(90deg);
+        }
+       .inner:nth-child(2){
+           background: url("微信图片_20180613113052.jpg")  no-repeat  center/200px 200px;
+            transform: translateY(50px) rotateX(90deg);
+        }
+         .inner:nth-child(3){
+             background: url("微信图片_20180613113056.jpg")  no-repeat  center/200px 200px;
+            transform: translateX(-50px) rotateY(90deg);
+        }
+        .inner:nth-child(4){
+            background: url("微信图片_20180613113101.jpg")  no-repeat  center/200px 200px;
+            transform: translateX(50px) rotateY(90deg);
+        }
+        .inner:nth-child(5){
+            background: url("微信图片_20180613113105.jpg")  no-repeat  center/200px 200px;
+            transform: translateZ(50px);
+        }
+        .inner:nth-child(6){
+            background: url("微信图片_20180613113108.jpg")  no-repeat  center/200px 200px;
+            transform: translateZ(-50px);
+        }
+        @keyframes rotate {
+            0%{
+               transform: rotateX(0) rotateY(0) ;
+            }
+            50%{
+
+            }
+            100%{
+                transform: rotateX(360deg) rotateY(360deg);
+
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="scene">
+    <div class="demo">
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div>
+</div>
+
+
+</body>
+</html>
